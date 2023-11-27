@@ -19,15 +19,15 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.deepPurpleAccent,
       ),
       body: Center(
-        child: ElevatedButton.icon(
+        child: IconButton(
           onPressed: () {
             print('You clicked me');
           },
-          icon: const Icon(Icons.home),
-          label: const Text('Home'),
+          icon: const Icon(Icons.home, color: Colors.red),
+          iconSize: 50,
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.black,
-            foregroundColor: Color.fromARGB(255, 209, 209, 209),
+            foregroundColor: Color.fromARGB(255, 150, 0, 0),
           ),
         ),
       ),
