@@ -14,15 +14,22 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Images'),
+        title: const Text('Buttons'),
         centerTitle: true,
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.deepPurpleAccent,
       ),
       body: Center(
-        child: Image(
-            image: NetworkImage(
-                "https://imageio.forbes.com/specials-images/imageserve/64dc3429e2fe802da288000e/Fake-AI-image-of-Donald-Trump-posing-for-a-mugshot-that-s-going-viral-/960x0.jpg?format=jpg&width=960")),
-        // image: AssetImage("./assets/trump.png")),
+        child: ElevatedButton.icon(
+          onPressed: () {
+            print('You clicked me');
+          },
+          icon: const Icon(Icons.home),
+          label: const Text('Home'),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.black,
+            foregroundColor: Color.fromARGB(255, 209, 209, 209),
+          ),
+        ),
       ),
     );
   }
