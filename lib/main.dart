@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import "package:flutter/services.dart";
 
 void main() => runApp(
       const MaterialApp(
@@ -15,30 +14,15 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My third App'),
+        title: const Text('Images'),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.deepPurple,
       ),
-      body: const Center(
-        child: Text(
-          'We are doing this again',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
-            color: Colors.black,
-          ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => {SystemNavigator.pop()},
-        backgroundColor: Colors.red,
-        child: const Text(
-          'Exit',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
+      body: Center(
+        child: Image(
+            image: NetworkImage(
+                "https://imageio.forbes.com/specials-images/imageserve/64dc3429e2fe802da288000e/Fake-AI-image-of-Donald-Trump-posing-for-a-mugshot-that-s-going-viral-/960x0.jpg?format=jpg&width=960")),
+        // image: AssetImage("./assets/trump.png")),
       ),
     );
   }
