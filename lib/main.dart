@@ -1,20 +1,25 @@
 import "package:flutter/material.dart";
-import "package:flutter/services.dart";
 
-void main() => runApp(
-      MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Second App'),
-            centerTitle: true,
-          ),
-          body: const Center(
-            child: Text('Hello classroom'),
-          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () => {SystemNavigator.pop()},
-            child: const Text('Exit'),
-          ),
+void main() => runApp(MaterialApp(
+      home: Home(),
+    ));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('My third App'),
+          centerTitle: true,
+          backgroundColor: Colors.amber[200],
         ),
-      ),
-    );
+        body: const Center(
+          child: Text(
+            'We are doing this again',
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
+          ),
+        ));
+  }
+}
